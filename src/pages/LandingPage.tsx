@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import GradientBackground from '@/components/GradientBackground';
 import Button from '@/components/Button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Leaf, Brain, BookOpen } from 'lucide-react';
 
 const LandingPage = () => {
   return (
@@ -24,6 +24,49 @@ const LandingPage = () => {
             <Button variant="outline" size="lg">
               Learn More
             </Button>
+          </div>
+        </div>
+        
+        {/* What is This Project About? Section */}
+        <div className="mt-32 max-w-5xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in" style={{animationDelay: '300ms'}}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">What is This Project About?</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              This platform allows users to explore interactive 3D models of plants to enhance their understanding of plant structure, 
+              function, and diversity. It's designed to be an engaging learning tool for students, educators, and plant enthusiasts alike.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 flex flex-col items-center text-center animate-fade-in" style={{animationDelay: '400ms'}}>
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Leaf className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Explore Realistic 3D Models</h3>
+              <p className="text-muted-foreground">
+                Interact with highly detailed plant models that showcase every aspect of their structure.
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 flex flex-col items-center text-center animate-fade-in" style={{animationDelay: '500ms'}}>
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Brain className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Learn by Interaction</h3>
+              <p className="text-muted-foreground">
+                Engage with plants in a hands-on way that enhances understanding and retention of botanical concepts.
+              </p>
+            </div>
+            
+            <div className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 flex flex-col items-center text-center animate-fade-in" style={{animationDelay: '600ms'}}>
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <BookOpen className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Educational & Engaging</h3>
+              <p className="text-muted-foreground">
+                Designed with learning in mind, making botanical education more accessible and enjoyable.
+              </p>
+            </div>
           </div>
         </div>
         
