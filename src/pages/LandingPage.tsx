@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import GradientBackground from '@/components/GradientBackground';
 import Button from '@/components/Button';
+import ContactSection from '@/components/ContactSection';
 import { ArrowRight, Leaf, Brain, BookOpen, Sun, Droplets, Sprout, Mountain } from 'lucide-react';
 
 const LandingPage = () => {
@@ -126,6 +127,9 @@ const LandingPage = () => {
           </Button>
         </div>
       </div>
+      
+      {/* Contact Section */}
+      <ContactSection />
     </GradientBackground>
   );
 };

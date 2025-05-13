@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react';
 import ModelCard from '@/components/ModelCard';
+import ContactSection from '@/components/ContactSection';
 import { Leaf } from 'lucide-react';
 
 // Placeholder data for the models
@@ -75,6 +76,9 @@ const Dashboard = () => {
           ))}
         </div>
       </div>
+      
+      {/* Contact Section */}
+      <ContactSection />
     </div>
   );
 };
