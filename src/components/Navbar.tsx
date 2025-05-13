@@ -48,7 +48,7 @@ const Navbar = () => {
             Dashboard
           </Link>
           {location.pathname === "/" ? (
-            <Button variant="gradient" as={Link} to="/dashboard">
+            <Button variant="gradient" to="/dashboard">
               Sign In
             </Button>
           ) : null}
@@ -77,7 +77,7 @@ const Navbar = () => {
             Dashboard
           </Link>
           {location.pathname === "/" ? (
-            <Button variant="gradient" as={Link} to="/dashboard" className="w-full">
+            <Button variant="gradient" to="/dashboard" className="w-full">
               Sign In
             </Button>
           ) : null}

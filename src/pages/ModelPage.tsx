@@ -81,7 +81,7 @@ const ModelPage = () => {
       <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
         <h2 className="text-2xl font-bold mb-4">Model Not Found</h2>
         <p className="text-muted-foreground mb-8">The model you're looking for doesn't exist or has been removed.</p>
-        <Button variant="default" as={Link} to="/dashboard">
+        <Button variant="default" to="/dashboard">
           Return to Dashboard
         </Button>
       </div>
@@ -93,7 +93,7 @@ const ModelPage = () => {
       <div className="container mx-auto px-4 py-24">
         {/* Back button */}
         <div className="mb-8">
-          <Button variant="ghost" as={Link} to="/dashboard" className="group">
+          <Button variant="ghost" to="/dashboard" className="group">
             <ArrowLeft className="mr-2 w-4 h-4 transition-transform group-hover:-translate-x-1" />
             Back to Dashboard
           </Button>

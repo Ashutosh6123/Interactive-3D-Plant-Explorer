@@ -11,7 +11,7 @@ const NotFound = () => {
         <p className="text-muted-foreground text-lg mb-8">
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <Button variant="gradient" size="lg" as={Link} to="/">
+        <Button variant="gradient" size="lg" to="/">
           Return Home
         </Button>
       </div>

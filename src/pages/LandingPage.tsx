@@ -17,7 +17,7 @@ const LandingPage = () => {
             Visualize, interact, and explore detailed 3D models in a completely immersive experience.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="gradient" size="lg" as={Link} to="/dashboard" className="group">
+            <Button variant="gradient" size="lg" to="/dashboard" className="group">
               Get Started 
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
@@ -64,7 +64,7 @@ const LandingPage = () => {
           <p className="text-lg mb-8 max-w-2xl mx-auto">
             Join thousands of professionals already using our platform for immersive 3D visualization.
           </p>
-          <Button variant="gradient" size="lg" as={Link} to="/dashboard">
+          <Button variant="gradient" size="lg" to="/dashboard">
             Get Started Now
           </Button>
         </div>
