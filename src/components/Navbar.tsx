@@ -3,12 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu } from 'lucide-react';
+import { Menu, LogOut, User } from 'lucide-react';
+import { useAuth, UserButton } from '@clerk/clerk-react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const { isSignedIn } = useAuth();
   
   // Detect scroll to change navbar style
   useEffect(() => {
@@ -47,11 +49,22 @@ const Navbar = () => {
           <Link to="/dashboard" className={cn("hover:text-primary transition-colors", location.pathname.startsWith("/dashboard") && "text-primary font-medium")}>
             Dashboard
           </Link>
-          {location.pathname === "/" ? (
-            <Button variant="gradient" to="/dashboard">
+          
+          {isSignedIn ? (
+            <div className="flex items-center gap-4">
+              <UserButton 
+                appearance={{
+                  elements: {
+                    userButtonAvatarBox: "w-8 h-8 rounded-full"
+                  }
+                }}
+              />
+            </div>
+          ) : (
+            <Button variant="gradient" to="/auth">
               Sign In
             </Button>
-          ) : null}
+          )}
         </nav>
         
         {/* Mobile Menu Button */}
@@ -76,11 +89,16 @@ const Navbar = () => {
           <Link to="/dashboard" className={cn("py-2 hover:text-primary transition-colors", location.pathname.startsWith("/dashboard") && "text-primary font-medium")}>
             Dashboard
           </Link>
-          {location.pathname === "/" ? (
-            <Button variant="gradient" to="/dashboard" className="w-full">
+          
+          {isSignedIn ? (
+            <div className="flex items-center justify-between">
+              <UserButton />
+            </div>
+          ) : (
+            <Button variant="gradient" to="/auth" className="w-full">
               Sign In
             </Button>
-          ) : null}
+          )}
         </div>
       </div>
     </header>
