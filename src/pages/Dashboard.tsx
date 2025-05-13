@@ -1,59 +1,63 @@
 
 import { useEffect } from 'react';
 import ModelCard from '@/components/ModelCard';
+import { Leaf } from 'lucide-react';
 
 // Placeholder data for the models
 const MODELS_DATA = [
   {
     id: "1",
-    title: "Architectural Building",
-    description: "Modern architectural design with detailed interior elements and structural components.",
+    title: "Common Oak Tree",
+    description: "Detailed 3D model of Quercus robur showing trunk structure, branch patterns, and leaf arrangements.",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
   },
   {
     id: "2",
-    title: "Robotic Arm Assembly",
-    description: "Detailed industrial robot arm with articulated joints and precise mechanical components.",
+    title: "Venus Flytrap",
+    description: "Interactive model of Dionaea muscipula demonstrating its unique trap mechanism and digestive process.",
     imageUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
   },
   {
     id: "3",
-    title: "Human Anatomy Model",
-    description: "Complete anatomical human model with detailed organ systems and skeletal structure.",
+    title: "Flowering Cherry",
+    description: "Complete 3D model of Prunus serrulata with detailed blossom structures and growing patterns.",
     imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
   },
   {
     id: "4",
-    title: "Aerospace Craft",
-    description: "Advanced spacecraft design with detailed propulsion systems and navigational components.",
+    title: "Giant Sequoia",
+    description: "Scaled model of Sequoiadendron giganteum showing its massive trunk and characteristic canopy formation.",
     imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475"
   },
   {
     id: "5",
-    title: "Molecular Structure",
-    description: "Complex molecular compound with accurate atomic structure and bonding visualization.",
+    title: "Water Lily",
+    description: "Aquatic plant model of Nymphaea showing both underwater structures and floating leaf patterns.",
     imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
   },
   {
     id: "6",
-    title: "Classic Sports Car",
-    description: "Vintage sports car with detailed interior and mechanical parts fully modeled.",
+    title: "Orchid Collection",
+    description: "Various orchid species with detailed flower structures and root systems fully modeled in 3D.",
     imageUrl: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
   }
 ];
 
 const Dashboard = () => {
   useEffect(() => {
-    document.title = "Dashboard | 3D Model Explorer";
+    document.title = "Dashboard | Plant 3D Explorer";
   }, []);
 
   return (
-    <div className="bg-background min-h-screen">
+    <div className="bg-background min-h-screen nature-gradient">
       <div className="container mx-auto px-4 py-24">
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold mb-3">3D Model Dashboard</h1>
-          <p className="text-muted-foreground">
-            Explore our collection of interactive 3D models
+        <div className="mb-12 text-center md:text-left">
+          <div className="inline-flex items-center gap-3 mb-4">
+            <Leaf className="w-6 h-6 text-primary" />
+            <h1 className="text-3xl font-bold">Plant Explorer</h1>
+          </div>
+          <p className="text-muted-foreground max-w-2xl mx-auto md:mx-0">
+            Explore our collection of interactive 3D plant models and discover the beauty of botanical structures
           </p>
         </div>
         

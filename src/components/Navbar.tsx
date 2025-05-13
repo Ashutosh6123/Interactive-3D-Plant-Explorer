@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu, LogOut, User } from 'lucide-react';
+import { Menu, LogOut, User, Leaf } from 'lucide-react';
 import { useAuth, UserButton } from '@clerk/clerk-react';
 
 const Navbar = () => {
@@ -37,8 +37,10 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between h-16 px-4 md:px-6">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg"></div>
-          <span className="font-bold text-xl hidden sm:inline-block">ModelViewer</span>
+          <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
+            <Leaf className="w-4 h-4 text-white" />
+          </div>
+          <span className="font-bold text-xl hidden sm:inline-block">PlantViewer</span>
         </Link>
         
         {/* Desktop Navigation */}

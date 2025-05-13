@@ -15,7 +15,7 @@ const ModelCard = ({ id, title, description, imageUrl, className }: ModelCardPro
     <Link 
       to={`/model/${id}`}
       className={cn(
-        "block rounded-xl overflow-hidden card-hover bg-card border border-border",
+        "block rounded-xl overflow-hidden card-hover nature-card",
         className
       )}
     >
