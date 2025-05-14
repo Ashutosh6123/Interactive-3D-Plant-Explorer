@@ -1,16 +1,34 @@
 
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+
+// Import all images
+import philodendronImg from '@/assets/images/philodendron.jpg';
+import monsteraImg from '@/assets/images/monstera.jpg';
+import snakePlantImg from '@/assets/images/snake-plant.jpg';
+import fiddleLeafImg from '@/assets/images/fiddle-leaf.jpg';
+
+// Image mapping object to access images by name
+const imageMap: Record<string, string> = {
+  'philodendron.jpg': philodendronImg,
+  'monstera.jpg': monsteraImg,
+  'snake-plant.jpg': snakePlantImg,
+  'fiddle-leaf.jpg': fiddleLeafImg,
+};
 
 export interface ModelCardProps {
   id: string;
   title: string;
   description: string;
-  imageUrl: string;
+  image: string; // Now references a local image filename
   className?: string;
 }
 
-const ModelCard = ({ id, title, description, imageUrl, className }: ModelCardProps) => {
+const ModelCard = ({ id, title, description, image, className }: ModelCardProps) => {
+  // Get the image source from our mapping
+  const imageSrc = imageMap[image] || '';
+  
   return (
     <Link 
       to={`/model/${id}`}
@@ -22,7 +40,7 @@ const ModelCard = ({ id, title, description, imageUrl, className }: ModelCardPro
       {/* Image */}
       <div className="aspect-[4/3] overflow-hidden bg-muted">
         <img 
-          src={imageUrl} 
+          src={imageSrc} 
           alt={title} 
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />

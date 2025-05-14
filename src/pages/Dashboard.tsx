@@ -4,43 +4,43 @@ import ModelCard from '@/components/ModelCard';
 import ContactSection from '@/components/ContactSection';
 import { Leaf } from 'lucide-react';
 
-// Placeholder data for the models
+// Updated model data with local image filenames
 const MODELS_DATA = [
   {
     id: "1",
     title: "Philodendron",
     description: "Detailed 3D model of Philodendron Plant.",
-    imageUrl: "https://images.app.goo.gl/JYgWxiLtkRuaux5B7"
+    image: "philodendron.jpg"
   },
   {
     id: "2",
-    title: "Venus Flytrap",
-    description: "Interactive model of Dionaea muscipula demonstrating its unique trap mechanism and digestive process.",
-    imageUrl: "https://plantzone.in/product/monstera-deliciosa-plant/"
+    title: "Monstera Deliciosa",
+    description: "Interactive model of Monstera deliciosa demonstrating its unique leaf fenestration patterns.",
+    image: "monstera.jpg"
   },
   {
     id: "3",
-    title: "Flowering Cherry",
-    description: "Complete 3D model of Prunus serrulata with detailed blossom structures and growing patterns.",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+    title: "Snake Plant",
+    description: "Complete 3D model of Dracaena trifasciata with detailed leaf structures and growing patterns.",
+    image: "snake-plant.jpg"
   },
   {
     id: "4",
-    title: "Giant Sequoia",
-    description: "Scaled model of Sequoiadendron giganteum showing its massive trunk and characteristic canopy formation.",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475"
+    title: "Fiddle Leaf Fig",
+    description: "Scaled model of Ficus lyrata showing its characteristic large leaves and growth patterns.",
+    image: "fiddle-leaf.jpg"
   },
   {
     id: "5",
     title: "Water Lily",
     description: "Aquatic plant model of Nymphaea showing both underwater structures and floating leaf patterns.",
-    imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+    image: "philodendron.jpg" // Reusing philodendron image as placeholder
   },
   {
     id: "6",
     title: "Orchid Collection",
     description: "Various orchid species with detailed flower structures and root systems fully modeled in 3D.",
-    imageUrl: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+    image: "monstera.jpg" // Reusing monstera image as placeholder
   }
 ];
 
@@ -70,7 +70,7 @@ const Dashboard = () => {
                 id={model.id}
                 title={model.title}
                 description={model.description}
-                imageUrl={model.imageUrl}
+                image={model.image}
               />
             </div>
           ))}

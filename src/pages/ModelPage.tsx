@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Button from '@/components/Button';
@@ -6,7 +5,21 @@ import { ArrowLeft, Info } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card } from '@/components/ui/card';
 
-// Refactored models data with structured description objects
+// Import all images
+import philodendronImg from '@/assets/images/philodendron.jpg';
+import monsteraImg from '@/assets/images/monstera.jpg';
+import snakePlantImg from '@/assets/images/snake-plant.jpg';
+import fiddleLeafImg from '@/assets/images/fiddle-leaf.jpg';
+
+// Image mapping object to access images by name
+const imageMap: Record<string, string> = {
+  'philodendron.jpg': philodendronImg,
+  'monstera.jpg': monsteraImg,
+  'snake-plant.jpg': snakePlantImg,
+  'fiddle-leaf.jpg': fiddleLeafImg,
+};
+
+// Refactored models data with structured description objects and local image references
 const MODELS_DATA = [
   {
     id: "1",
@@ -25,7 +38,7 @@ const MODELS_DATA = [
       toxicity: "**Poisonous** to humans, cats, and dogs if ingested, containing calcium oxalate crystals",
       uses: "Popular houseplants for their decorative foliage; some varieties can purify indoor air"
     },
-    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "philodendron.jpg",
     tags: ["Tropical", "Houseplant", "Foliage"],
     splineUrl: "https://my.spline.design/3philodendrons-kSXrOPVluBO9kiPJrGdaCrUw/"
   },
@@ -46,7 +59,7 @@ const MODELS_DATA = [
       toxicity: "**Mildly toxic** to pets and humans if ingested, causing oral irritation",
       uses: "Popular statement houseplant; dramatic foliage adds tropical aesthetic to interiors"
     },
-    imageUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    image: "monstera.jpg",
     tags: ["Tropical", "Statement Plant", "Climbing"],
     splineUrl: "https://my.spline.design/3philodendrons-kSXrOPVluBO9kiPJrGdaCrUw/"
   },
@@ -67,7 +80,7 @@ const MODELS_DATA = [
       toxicity: "**Mildly toxic** to pets if ingested, causing nausea and diarrhea",
       uses: "Excellent air purifier, removing toxins like formaldehyde; perfect for beginners and low-maintenance environments"
     },
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    image: "snake-plant.jpg",
     tags: ["Low Maintenance", "Air Purifying", "Drought Tolerant"],
     splineUrl: "https://my.spline.design/braidatahydroponicsystem-1OwpfrgnAVxSuV97qhUFt5dh/"
   },
@@ -88,7 +101,7 @@ const MODELS_DATA = [
       toxicity: "**Mildly toxic** to pets and humans due to sap containing ficin",
       uses: "Popular statement houseplant in interior design; creates dramatic vertical accent"
     },
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    image: "fiddle-leaf.jpg",
     tags: ["Statement Plant", "Indoor Tree", "Tropical"],
     splineUrl: "https://my.spline.design/clonergrasscopygrass-1Xqmx3OhcSeh0dG3aYpZIXSm/"
   }
@@ -131,6 +144,9 @@ const ModelPage = () => {
       </div>
     );
   }
+
+  // Get the image source from our mapping
+  const imageSrc = model ? imageMap[model.image] || '' : '';
 
   return (
     <div className="bg-background min-h-screen">
@@ -201,7 +217,7 @@ const ModelPage = () => {
               </div>
             </div>
             
-            {/* Additional details - specification section can stay */}
+            {/* Additional details - specification section */}
             <div className="mt-8">
               <h2 className="text-xl font-medium mb-3">Specifications</h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
