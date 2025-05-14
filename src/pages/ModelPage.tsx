@@ -7,16 +7,16 @@ import { Card } from '@/components/ui/card';
 
 // Import all images
 import philodendronImg from '@/assets/images/philodendron.jpg';
-import monsteraImg from '@/assets/images/monstera.jpg';
-import snakePlantImg from '@/assets/images/snake-plant.jpg';
-import fiddleLeafImg from '@/assets/images/fiddle-leaf.jpg';
+import monsteraImg from '@/assets/images/Monstera.jpg';
+import snakePlantImg from '@/assets/images/snakePlant.jpg';
+import fiddleLeafImg from '@/assets/images/fiddleLeaf.jpeg';
 
 // Image mapping object to access images by name
 const imageMap: Record<string, string> = {
   'philodendron.jpg': philodendronImg,
-  'monstera.jpg': monsteraImg,
-  'snake-plant.jpg': snakePlantImg,
-  'fiddle-leaf.jpg': fiddleLeafImg,
+  'Monstera.jpg': monsteraImg,
+  'snakePlant.jpg': snakePlantImg,
+  'fiddleLeaf.jpeg': fiddleLeafImg,
 };
 
 // Refactored models data with structured description objects and local image references
@@ -59,7 +59,7 @@ const MODELS_DATA = [
       toxicity: "**Mildly toxic** to pets and humans if ingested, causing oral irritation",
       uses: "Popular statement houseplant; dramatic foliage adds tropical aesthetic to interiors"
     },
-    image: "monstera.jpg",
+    image: "Monstera.jpg",
     tags: ["Tropical", "Statement Plant", "Climbing"],
     splineUrl: "https://my.spline.design/3philodendrons-kSXrOPVluBO9kiPJrGdaCrUw/"
   },
@@ -80,7 +80,7 @@ const MODELS_DATA = [
       toxicity: "**Mildly toxic** to pets if ingested, causing nausea and diarrhea",
       uses: "Excellent air purifier, removing toxins like formaldehyde; perfect for beginners and low-maintenance environments"
     },
-    image: "snake-plant.jpg",
+    image: "snakePlant.jpg",
     tags: ["Low Maintenance", "Air Purifying", "Drought Tolerant"],
     splineUrl: "https://my.spline.design/braidatahydroponicsystem-1OwpfrgnAVxSuV97qhUFt5dh/"
   },
@@ -101,7 +101,7 @@ const MODELS_DATA = [
       toxicity: "**Mildly toxic** to pets and humans due to sap containing ficin",
       uses: "Popular statement houseplant in interior design; creates dramatic vertical accent"
     },
-    image: "fiddle-leaf.jpg",
+    image: "fiddleLeaf.jpeg",
     tags: ["Statement Plant", "Indoor Tree", "Tropical"],
     splineUrl: "https://my.spline.design/clonergrasscopygrass-1Xqmx3OhcSeh0dG3aYpZIXSm/"
   }
