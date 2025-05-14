@@ -8,15 +8,15 @@ import { Leaf } from 'lucide-react';
 const MODELS_DATA = [
   {
     id: "1",
-    title: "Common Oak Tree",
-    description: "Detailed 3D model of Quercus robur showing trunk structure, branch patterns, and leaf arrangements.",
-    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    title: "Philodendron",
+    description: "Detailed 3D model of Philodendron Plant.",
+    imageUrl: "https://images.app.goo.gl/JYgWxiLtkRuaux5B7"
   },
   {
     id: "2",
     title: "Venus Flytrap",
     description: "Interactive model of Dionaea muscipula demonstrating its unique trap mechanism and digestive process.",
-    imageUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+    imageUrl: "https://plantzone.in/product/monstera-deliciosa-plant/"
   },
   {
     id: "3",
