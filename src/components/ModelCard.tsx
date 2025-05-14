@@ -5,9 +5,9 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 // Import all images
 import philodendronImg from '@/assets/images/philodendron.jpg';
-import monsteraImg from '@/assets/images/monstera.jpg';
-import snakePlantImg from '@/assets/images/snake-plant.jpg';
-import fiddleLeafImg from '@/assets/images/fiddle-leaf.jpg';
+import monsteraImg from '@/assets/images/Monstera.jpg';
+import snakePlantImg from '@/assets/images/snakePlant.jpg';
+import fiddleLeafImg from '@/assets/images/fiddleLeaf.jpg';
 
 // Image mapping object to access images by name
 const imageMap: Record<string, string> = {
