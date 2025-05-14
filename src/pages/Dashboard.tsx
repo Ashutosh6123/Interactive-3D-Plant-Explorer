@@ -16,19 +16,19 @@ const MODELS_DATA = [
     id: "2",
     title: "Monstera Deliciosa",
     description: "Interactive model of Monstera deliciosa demonstrating its unique leaf fenestration patterns.",
-    image: "monstera.jpg"
+    image: "Monstera.jpg"
   },
   {
     id: "3",
     title: "Snake Plant",
     description: "Complete 3D model of Dracaena trifasciata with detailed leaf structures and growing patterns.",
-    image: "snake-plant.jpg"
+    image: "snakePlant.jpg"
   },
   {
     id: "4",
     title: "Fiddle Leaf Fig",
     description: "Scaled model of Ficus lyrata showing its characteristic large leaves and growth patterns.",
-    image: "fiddle-leaf.jpg"
+    image: "fiddleLeaf.jpeg"
   },
   {
     id: "5",
@@ -40,7 +40,7 @@ const MODELS_DATA = [
     id: "6",
     title: "Orchid Collection",
     description: "Various orchid species with detailed flower structures and root systems fully modeled in 3D.",
-    image: "monstera.jpg" // Reusing monstera image as placeholder
+    image: "Monstera.jpg" // Reusing monstera image as placeholder
   }
 ];
 
