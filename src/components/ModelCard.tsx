@@ -7,14 +7,14 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import philodendronImg from '@/assets/images/philodendron.jpg';
 import monsteraImg from '@/assets/images/Monstera.jpg';
 import snakePlantImg from '@/assets/images/snakePlant.jpg';
-import fiddleLeafImg from '@/assets/images/fiddleLeaf.jpg';
+import fiddleLeafImg from '@/assets/images/fiddleLeaf.jpeg';
 
 // Image mapping object to access images by name
 const imageMap: Record<string, string> = {
   'philodendron.jpg': philodendronImg,
   'Monstera.jpg': monsteraImg,
   'snakePlant.jpg': snakePlantImg,
-  'fiddleLeaf.jpg': fiddleLeafImg,
+  'fiddleLeaf.jpeg': fiddleLeafImg,
 };
 
 export interface ModelCardProps {
