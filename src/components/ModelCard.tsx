@@ -12,9 +12,9 @@ import fiddleLeafImg from '@/assets/images/fiddle-leaf.jpg';
 // Image mapping object to access images by name
 const imageMap: Record<string, string> = {
   'philodendron.jpg': philodendronImg,
-  'monstera.jpg': monsteraImg,
-  'snake-plant.jpg': snakePlantImg,
-  'fiddle-leaf.jpg': fiddleLeafImg,
+  'Monstera.jpg': monsteraImg,
+  'snakePlant.jpg': snakePlantImg,
+  'fiddleLeaf.jpg': fiddleLeafImg,
 };
 
 export interface ModelCardProps {
